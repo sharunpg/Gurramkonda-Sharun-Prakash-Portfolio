@@ -1,0 +1,227 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-surface: var(--surface);
+  --color-surface-foreground: var(--surface-foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --font-display: "Times New Roman", Times, serif;
+  --font-sans: "DM Sans", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --shadow-elevated:
+    0 1px 2px rgb(0 0 0 / 0.12),
+    0 16px 40px -20px rgb(0 0 0 / 0.25);
+}
+
+/* ========================================
+   LIGHT MODE
+   White background + forest green text
+   ======================================== */
+
+:root {
+  --radius: 0.5rem;
+
+  /* Warm cream background */
+  --background: #f4efe4;
+
+  /* Forest green main text */
+  --foreground: #123c35;
+
+  /* Surfaces */
+  --surface: #f8f3e9;
+  --surface-foreground: #123c35;
+
+  /* Cards */
+  --card: #faf6ed;
+  --card-foreground: #123c35;
+
+  /* Popovers */
+  --popover: #faf6ed;
+  --popover-foreground: #123c35;
+
+  /* Forest green buttons / highlights */
+  --primary: #123c35;
+  --primary-foreground: #f4efe4;
+
+  /* Secondary backgrounds */
+  --secondary: #e9e3d6;
+  --secondary-foreground: #123c35;
+
+  /* Muted elements */
+  --muted: #e9e3d6;
+  --muted-foreground: #315c53;
+
+  /* Accent */
+  --accent: #17473e;
+  --accent-foreground: #f4efe4;
+
+  --destructive: #b94a48;
+  --destructive-foreground: #ffffff;
+
+  /* Borders */
+  --border: #d3cbbb;
+  --input: #d3cbbb;
+  --ring: #123c35;
+}
+
+/* ========================================
+   DARK MODE
+   Forest green background + beige text
+   ======================================== */
+
+.dark {
+  --background: #0f493f;
+  --foreground: #e8ddc7;
+
+  --surface: #144f45;
+  --surface-foreground: #e8ddc7;
+
+  --card: #17564b;
+  --card-foreground: #e8ddc7;
+
+  --popover: #17564b;
+  --popover-foreground: #e8ddc7;
+
+  --primary: #4ac58b;
+  --primary-foreground: #0b342e;
+
+  --secondary: #205c51;
+  --secondary-foreground: #e8ddc7;
+
+  --muted: #205c51;
+  --muted-foreground: #d0c3aa;
+
+  --accent: #4ac58b;
+  --accent-foreground: #0b342e;
+
+  --destructive: #dc6262;
+  --destructive-foreground: #ffffff;
+
+  --border: #397066;
+  --input: #397066;
+  --ring: #4ac58b;
+}
+
+/* ========================================
+   BASE
+   ======================================== */
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
+
+  body {
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition:
+      background-color 0.25s ease,
+      color 0.25s ease;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    color: var(--color-foreground);
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background: var(--color-primary);
+    color: var(--color-primary-foreground);
+  }
+}
+
+/* ========================================
+   PAGE CONTAINER
+   ======================================== */
+
+@utility container-page {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 72rem;
+  padding-inline: 1.25rem;
+}
+
+/* ========================================
+   REVEAL ANIMATION
+   ======================================== */
+
+@utility reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+@utility reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
