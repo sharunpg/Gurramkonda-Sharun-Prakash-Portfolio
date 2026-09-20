@@ -7,11 +7,11 @@ export const LINKS = {
 
 export const PROFILE = {
   name: "Gurramkonda Sharun Prakash",
-  headline: "Software Engineer | Full-Stack Developer | AI/ML Enthusiast",
+  headline: "Test Engineer | Software Engineer | Full-Stack Developer | AI/ML Enthusiast",
   location: "Bengaluru, Karnataka",
   email: "Sharun2794@gmail.com",
   intro:
-    "Computer Science Engineering graduate building full-stack and backend applications with Java, Spring Boot, React.js, Python and SQL. I work with REST APIs, relational databases, cloud fundamentals and AI/ML, with a focus on clean, well-tested code.",
+  "Computer Science Engineering graduate and Test Engineer at Soais IT Solutions, working on Workday applications and business processes. Skilled in Java, Spring Boot, React.js, Python, SQL, REST APIs, software testing and AI/ML, with a focus on building reliable and well-tested solutions.",
 };
 
 export const NAV_ITEMS = [
@@ -26,6 +26,17 @@ export const NAV_ITEMS = [
 ];
 
 export const EXPERIENCE = [
+  {
+    role: "Test Engineer",
+    company: "SOA IT Solutions",
+    period: "August 2026 – Present",
+    points: [
+      "Working as a Test Engineer on Workday-based applications and business processes.",
+      "Performing functional testing and validating Workday workflows against business and functional requirements.",
+      "Creating and executing test scenarios, test cases, and validating application results.",
+      "Identifying, documenting, and tracking defects while collaborating with teams to support issue resolution.",
+    ],
+  },
   {
     role: "Web Developer Intern",
     company: "Exposys Data Labs",

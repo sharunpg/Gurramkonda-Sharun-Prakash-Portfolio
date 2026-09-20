@@ -1,11 +1,11 @@
 import { Section } from "./Section";
 
 const focus = [
-  "Problem solving & debugging",
+  "Software engineering",
+  "Backend development",
+  "AI & Machine Learning",
   "REST API development",
-  "Database integration",
-  "Testing & root cause analysis",
-  "Continuous learning",
+  "Problem solving & debugging",
 ];
 
 export function About() {
@@ -14,21 +14,22 @@ export function About() {
       <div className="grid gap-10 md:grid-cols-[1.5fr_1fr]">
         <div className="space-y-5 text-base leading-relaxed text-muted-foreground">
           <p>
-            I am a Computer Science Engineering graduate with hands-on experience building
-            full-stack, backend, and AI-powered applications. My work spans Java and Spring Boot
-            services, React.js interfaces, Python-based machine learning prototypes, and relational
-            databases such as PostgreSQL and MySQL.
+            I am a Computer Science Engineering graduate and currently working as a Test Engineer
+            at SOAIS IT Solutions. I work on Workday applications and business processes, with a
+            focus on functional testing, validating workflows, identifying issues, and ensuring
+            software quality.
           </p>
           <p>
-            I enjoy breaking down problems, debugging systematically, and designing REST APIs that
-            are documented, validated, and secure. Alongside development, I care about testing and
-            root cause analysis — verifying behaviour with unit, integration, and API tests before
-            shipping.
+            I have a strong interest in Software Engineering and enjoy understanding how
+            applications work, solving technical problems, debugging issues, and continuously
+            improving software quality. My technical background includes Java, Spring Boot,
+            Python, SQL, React.js, REST APIs, and relational databases.
           </p>
           <p>
-            I have foundational knowledge of cloud and DevOps practices, including AWS cloud
-            fundamentals, Docker, Kubernetes, and CI/CD workflows, and I keep learning continuously
-            to grow into a well-rounded software engineer.
+            Alongside software testing and development, I am interested in Artificial Intelligence
+            and Machine Learning and enjoy exploring how AI can be used to build practical
+            applications and automation solutions. I am continuously learning and expanding my
+            skills across testing, software engineering, automation, and AI/ML.
           </p>
         </div>
         <div className="rounded-lg border border-border bg-card p-6">
